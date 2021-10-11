@@ -1,5 +1,10 @@
 
-# クラス定義の練習
+# クラス定義
+# ２年生向け
+#
+# 課題　https://colab.research.google.com/drive/13An5bAh5Kg1TEg7jUoP0pHtoYdcXmidv?usp=sharing
+# !git clone https://github.com/kkuramitsu/tatoeba.git
+# import tatoeba.vec from Vec
 
 import math
 
