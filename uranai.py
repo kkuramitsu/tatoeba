@@ -36,4 +36,4 @@ def ask_birthyear(msg='何年生まれ？'):
     return year
 
 
-ask_birthday()
+# ask_birthday()
