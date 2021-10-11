@@ -9,7 +9,7 @@ def safe_int(c):
 
 def soul_number(s):
     n = sum(safe_int(c) for c in str(s))
-    if n % 11 == 0 and n < 10:
+    if n % 11 == 0 or n < 10:
         return n
     return soul_number(str(n))
 
