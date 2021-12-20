@@ -85,7 +85,7 @@ textarea {
     height: 0;
 }
 </style>
-<input id="name"/><label>👈名前を入れてね</label>
+<input id="name"/><label>👈名前(ニックネーム)</label>
 <div class="parent">
 <div style="float: left; width: 48%; text-align: right;">
 <label class="box24" for="input">改行を忘れないで</label>
@@ -148,8 +148,6 @@ print(x+y)
 def print_nop(*x):
     pass
 
-# https://hooks.slack.com/services/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
-
 def key_logger(text=SAMPLE, print=print_nop):
     session = str(uuid.uuid1())
     seq = 0
@@ -170,6 +168,7 @@ def key_logger(text=SAMPLE, print=print_nop):
             jsondata = {
                 'seq': seq,
                 'name': name,
+                'uuid': str(uuid.uuid4()),
                 'input': value,
                 'data': data,
             }
