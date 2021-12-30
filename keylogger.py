@@ -85,7 +85,7 @@ textarea {
     height: 0;
 }
 </style>
-<input id="name"/><label>👈名前(ニックネーム)</label>
+<input id="name"/><label>👈職業,M/F,年代</label>
 <div class="parent">
 <div style="float: left; width: 48%; text-align: right;">
 <label class="box24" for="input">改行を忘れないで</label>
